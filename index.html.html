@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+}
+
+
+/* Header */
+
+header {
+    background: #1f2937;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 15px;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hero */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #2563eb;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: white;
+    color: #2563eb;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Dashboard */
+
+.dashboard {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+
+.dashboard-card {
+    background: white;
+    width: 220px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.dashboard-card h3 {
+    margin-bottom: 10px;
+}
+
+.dashboard-card p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* Booking */
+
+.booking-section {
+    background: white;
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.booking-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+form label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+form input,
+form select {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+
+form button {
+    margin-top: 20px;
+    padding: 13px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form button:hover {
+    background: #1d4ed8;
+}
+
+
+/* Slots */
+
+.slots-section {
+    width: 90%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.slots-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+
+.legend-box {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+
+.legend-box.available {
+    background: #22c55e;
+}
+
+
+.legend-box.occupied {
+    background: #ef4444;
+}
+
+
+/* Parking Grid */
+
+#slotContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+
+.slot {
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 8px;
+    border: 2px solid #22c55e;
+    background: #dcfce7;
+}
+
+
+.slot h3 {
+    margin-bottom: 8px;
+}
+
+
+.slot.available {
+    background: #dcfce7;
+    border-color: #22c55e;
+}
+
+
+.slot.booked {
+    background: #fee2e2;
+    border-color: #ef4444;
+}
+
+
+.slot button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background: #ef4444;
+    color: white;
+    cursor: pointer;
+}
+
+
+.slot button:hover {
+    background: #dc2626;
+}
+
+
+/* Footer */
+
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    #slotContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    #slotContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        width: 90%;
+    }
+}
